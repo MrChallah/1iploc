@@ -1529,7 +1529,7 @@
         
         lastKnownLocation = locationData;
         lastKnownLocation.timestamp = Date.now();
-        if (showLoadingMessages || isSignificantMove) {
+        if (showLoadingMessages) {
           placeEl.textContent = "Loading location...";
         }
         
@@ -1694,7 +1694,7 @@
       return false;
     }
   });
-
+    
   // Double-click on location text to force refresh
   placeEl.addEventListener('dblclick', function() {
     console.log('🔄 Manual location refresh triggered by double-click');
